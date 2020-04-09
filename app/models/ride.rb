@@ -32,7 +32,7 @@ class Ride < ActiveRecord::Base
     new_ticket_count = self.user.tickets - self.attraction.tickets
     self.user.update(
       :happiness => new_happiness,
-      :nausea => new_nausea,
+      #:nausea => new_nausea,
       :tickets => new_ticket_count
     )
     "Thanks for riding the #{self.attraction.name}!"
